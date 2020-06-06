@@ -41,3 +41,13 @@ plot(env)
 env.Model.Viewer.ShowTrace = true;
 env.Model.Viewer.clearTrace;
 sim(qAgent,env) %Simulate the agent in the environment
+
+% % Try with a SARSA agent again
+% agentOpts = rlSARSAAgentOptions;
+% agentOpts.EpsilonGreedyExploration.Epsilon = 0.04;
+% sarsaAgent = rlSARSAAgent(qRepresentation,agentOpts);
+% trainingStats = train(sarsaAgent,env,trainOpts);
+% plot(env)
+% env.Model.Viewer.ShowTrace = true;
+% env.Model.Viewer.clearTrace;
+% sim(sarsaAgent,env)
